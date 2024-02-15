@@ -4,7 +4,7 @@ import { Outlines, useGLTF } from "@react-three/drei";
 export function ApplePie(props) {
   const { nodes, materials } = useGLTF("models/scene2/applePie.glb");
   return (
-    <group {...props} dispose={null} name="ApplePie">
+    <group {...props} name="ApplePie">
       <mesh
         castShadow
         receiveShadow
@@ -12,7 +12,9 @@ export function ApplePie(props) {
         material={nodes.APPLE_PIE.material}
         position={[4.305, 1.535, 1.948]}
         scale={0.105}
-      ></mesh>
+      >
+        {props.outline && <Outlines thickness={0.05} color="red" />}
+      </mesh>
     </group>
   );
 }
