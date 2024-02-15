@@ -4,7 +4,7 @@ import { Outlines, useGLTF } from "@react-three/drei";
 export function ApplePie(props) {
   const { nodes, materials } = useGLTF("models/scene2/applePie.glb");
   return (
-    <group {...props} name="ApplePie">
+    <group {...props} dispose={null} name="ApplePie">
       <mesh
         castShadow
         receiveShadow

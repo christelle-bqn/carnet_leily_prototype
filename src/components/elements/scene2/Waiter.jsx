@@ -4,7 +4,7 @@ import { Outlines, useGLTF } from "@react-three/drei";
 export function Waiter(props) {
   const { nodes, materials } = useGLTF("models/scene2/waiter.glb");
   return (
-    <group {...props} name="Waiter">
+    <group {...props} dispose={null} name="Waiter">
       <mesh
         castShadow
         receiveShadow
