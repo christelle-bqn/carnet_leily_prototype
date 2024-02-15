@@ -23,7 +23,6 @@ export const SecondScene = () => {
     { component: ApplePie, position: null, outline: false },
     { component: Waiter, position: null, outline: false },
   ]);
-  const [showOverlay, setShowOverlay] = useState(true);
   const [mode, setMode] = useState("click");
 
   const isDaughterEnabledRef = useRef(isDaughterEnabled);
@@ -101,18 +100,6 @@ export const SecondScene = () => {
     };
   }, []);
 
-  // useEffect(() => {
-  //   if (!showOverlay) {
-  //     let overlay = document.getElementById("overlay");
-  //     overlay.classList.add("hidden");
-  //   }
-  // }, [showOverlay]);
-
-  // useEffect(() => {
-  //   let overlay = document.getElementById("overlay");
-  //   overlay.classList.remove("hidden");
-  // }, []);
-
   const rotateAppart = () => {
     gsap.to(rotation, {
       1: rotation[1] + Math.PI,
@@ -146,8 +133,6 @@ export const SecondScene = () => {
   }, [daughterPosition, motherPosition]);
 
   const Move = (direction) => {
-    if (showOverlay) setShowOverlay(false);
-
     const step = 0.3;
     const newPosition = isDaughterEnabledRef.current
       ? [
