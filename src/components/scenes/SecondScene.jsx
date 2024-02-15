@@ -251,7 +251,7 @@ export const SecondScene = () => {
           <Center>
             <Appart />
 
-            {interactiveObjects.map(({ component: Item, outline }, index) => (
+            {/* {interactiveObjects.map(({ component: Item, outline }, index) => (
               <Item
                 key={index}
                 index={index}
@@ -264,7 +264,29 @@ export const SecondScene = () => {
                 }
                 onPointerLeave={() => mode === "click" && setCursor("default")}
               />
-            ))}
+            ))} */}
+
+            <ApplePie
+              outline={false}
+              onClick={(e) => onItemClick(e, index)}
+              onPointerEnter={() =>
+                interactiveObjects[index].outline &&
+                mode === "click" &&
+                setCursor("pointer")
+              }
+              onPointerLeave={() => mode === "click" && setCursor("default")}
+            />
+
+            <Waiter
+              outline={false}
+              onClick={(e) => onItemClick(e, index)}
+              onPointerEnter={() =>
+                interactiveObjects[index].outline &&
+                mode === "click" &&
+                setCursor("pointer")
+              }
+              onPointerLeave={() => mode === "click" && setCursor("default")}
+            />
 
             <Mother position={motherPosition} />
             <Daughter position={daughterPosition} />
