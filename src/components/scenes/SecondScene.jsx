@@ -236,7 +236,7 @@ export const SecondScene = () => {
           <Center>
             <Appart />
 
-            {interactiveObjects.map(({ component: Item, outline }, index) => (
+            {/* {interactiveObjects.map(({ component: Item, outline }, index) => (
               <Item
                 key={index}
                 index={index}
@@ -249,7 +249,7 @@ export const SecondScene = () => {
                 }
                 onPointerLeave={() => mode === "click" && setCursor("default")}
               />
-            ))}
+            ))} */}
 
             <Mother position={motherPosition} />
             <Daughter position={daughterPosition} />
