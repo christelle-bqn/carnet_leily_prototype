@@ -1,0 +1,49 @@
+#root {
+  width: 100vw;
+  height: 100vh;
+}
+
+body {
+  margin: 0;
+}
+
+#overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+#overlay.hidden {
+  display: none;
+}
+
+.overlay-content {
+  width: 50%;
+  margin: auto;
+  display: flex;
+  gap: 30px;
+  background-color: rgba(217, 217, 217, .9);
+  padding: 50px;
+}
+
+.overlay-content div {
+  flex-direction: column;
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  width: 50%;
+  height: 100%;
+}
+
+
+.overlay-content h3 {
+  text-align: center;
+}
+
+.overlay-content img {
+  height: 100px;
+}
