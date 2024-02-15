@@ -101,17 +101,17 @@ export const SecondScene = () => {
     };
   }, []);
 
-  useEffect(() => {
-    if (!showOverlay) {
-      let overlay = document.getElementById("overlay");
-      overlay.classList.add("hidden");
-    }
-  }, [showOverlay]);
+  // useEffect(() => {
+  //   if (!showOverlay) {
+  //     let overlay = document.getElementById("overlay");
+  //     overlay.classList.add("hidden");
+  //   }
+  // }, [showOverlay]);
 
-  useEffect(() => {
-    let overlay = document.getElementById("overlay");
-    overlay.classList.remove("hidden");
-  }, []);
+  // useEffect(() => {
+  //   let overlay = document.getElementById("overlay");
+  //   overlay.classList.remove("hidden");
+  // }, []);
 
   const rotateAppart = () => {
     gsap.to(rotation, {
