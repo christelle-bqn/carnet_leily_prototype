@@ -13,9 +13,7 @@ export function Waiter(props) {
         position={[-2.53, 1.673, -4.24]}
         rotation={[0, 0.147, 0]}
         scale={[0.388, 0.368, 0.388]}
-      >
-        {props.outline && <Outlines thickness={0.05} color="red" />}
-      </mesh>
+      ></mesh>
     </group>
   );
 }

@@ -12,9 +12,7 @@ export function ApplePie(props) {
         material={nodes.APPLE_PIE.material}
         position={[4.305, 1.535, 1.948]}
         scale={0.105}
-      >
-        {props.outline && <Outlines thickness={0.05} color="red" />}
-      </mesh>
+      ></mesh>
     </group>
   );
 }
